@@ -1,0 +1,497 @@
+/* General Styles */
+.header {
+  position: fixed;
+  background: none;
+  top: 0;
+  height: 120px;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s;
+}
+
+.header.hidden {
+  background-color: #33480A;
+  color: black;
+}
+
+.nav-list {
+  background: none;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  margin-right: 40px;
+  background: none;
+}
+
+.header li {
+  color: white;
+  font-weight: bold;
+
+}
+
+.nav-item.active li {
+  color: orange;
+}
+
+.logo101 {
+  width: 100px;
+  height: 90px;
+}
+
+.tast {
+  width: 100%;
+  height: 500px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 270px;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50px;
+  z-index: 3;
+  position: absolute;
+  left: calc(50% - (57% / 2));
+  top: 150px;
+  width: 57%;
+  height: 750px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-container1 {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 750px;
+  border-radius: 50px 0 0 50px;
+}
+
+.form-container1 h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 90px;
+  margin-top: 50px;
+}
+
+.form-container1 input[type="text"],
+.form-container1 input[type="email"],
+.form-container1 textarea {
+  width: 70%;
+  margin: 10px 50px;
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-container1 input[type="submit"] {
+  width: 200px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.form-container1 input[type="submit"]:hover {
+  background-color: darkorange;
+  color: white;
+}
+
+.image-container1 {
+  height: 750px;
+  width: 51%;
+  border-radius: 0 50px 50px 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.image-container1 img {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.footer {
+  margin-top: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.map-iframe {
+  margin-left: 100px;
+  border: none;
+  width: 800px;
+  height: 450px;
+}
+
+.contact-info {
+  margin-left: 50px;
+  text-align: center;
+}
+
+.title11 {
+  padding-bottom: 20px;
+  font-size: 60px;
+  color: orange;
+  font-weight: bold;
+  margin-top: -50px;
+}
+
+.address-info,
+.phone-info {
+  margin-top: 20px;
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.address-info img,
+.phone-info img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.address-info span,
+.phone-info span {
+  color: rgb(131, 131, 38);
+
+}
+
+.opening-hours {
+  width: 700px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  color: rgb(131, 131, 38);
+  background-color: #f5f5dc; /* Adjust background color as needed */
+  font-size: 25px;
+  text-align: center;
+  margin: 0 auto ; /* Centers the table horizontally */
+  margin-bottom: 35px;
+
+}
+
+.opening-hours th, .opening-hours td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 100px;
+}
+
+.opening-hours th {
+  font-weight: normal;
+}
+.message {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.message.success {
+  color: green;
+  background-color: #e0ffe0;
+  text-align: center;
+  margin: 30px 30px;
+  width: 50%;
+  border-radius: 50px;
+
+}
+
+.message.error {
+  color: red;
+  background-color: #ffe0e0;
+  text-align: center;
+  margin: 30px 30px;
+  width: 50%;
+  border-radius: 50px;
+}
+/* Media Queries */
+@media (max-width: 1024px) {
+  .header {
+    height: 100px;
+  }
+
+  .nav-item li {
+    font-size: 20px;
+  }
+
+  .container1 {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    margin-left: -165px;
+    background-color: white;
+  }
+
+  .form-container1,
+  .image-container1 {
+    width: 90%;
+    border-radius: 0;
+  }
+
+  .form-container1 {
+    height: auto;
+    padding: 40px 20px;
+    background-color: white;
+
+  }
+
+  .image-container1 {
+    height: 400px;
+  }
+
+  .form-container1 h2 {
+    font-size: 60px;
+  }
+
+  .form-container1 input[type="text"],
+  .form-container1 input[type="email"],
+  .form-container1 textarea {
+    width: 80%;
+    margin: 10px 10%;
+  }
+
+  .form-container1 input[type="submit"] {
+    margin-left: 10%;
+  }
+
+  .footer {
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+
+  }
+
+  .title11 {
+    font-size: 60px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .address-info,
+  .phone-info {
+    font-size: 40px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .address-info img,
+  .phone-info img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .map-iframe {
+    width: 1000px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    width: 90%;
+    margin-top: -600px;
+    height: 600px;
+    flex-direction: column;
+    margin-left: -80px;
+    margin-right: 0;
+    top: 0;
+    position: relative;
+    border-radius: 50px;
+  }
+
+  .form-container1 {
+    width: 100%;
+    height: 750px;
+    border-radius: 50px 50px 50px 50px;
+    background: none;
+    margin-bottom: 20px;
+  }
+  .image-container1 {
+   display: none;
+  }
+
+  .form-container1 h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .form-container1 input[type="text"],
+  .form-container1 input[type="email"],
+  .form-container1 textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+
+  }
+
+  .form-container1 input[type="submit"] {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .image-container1 {
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+  }
+
+  .footer {
+    margin-top: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .title11 {
+    font-size: 60px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .address-info,
+  .phone-info {
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .address-info img,
+  .phone-info img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .map-iframe {
+    width: 400px;
+    margin-left: 0;
+    margin-top: -260px;
+    text-align: center;
+    border-radius: 50px;
+  }
+
+   .header {
+    top: 0;
+    right: 0;
+    /* Align to the right side for smaller screens */
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: flex-start;
+    /* Align items to the top */
+    align-items: flex-end;
+    /* Align items to the right */
+    /* Full viewport height */
+    padding: 20px;
+    /* Add some padding */
+  }
+
+  .ul {
+    display: none;
+    border: none;
+    flex-direction: column;
+    border-radius: 50px;
+    width: 180px;
+    display: block; 
+    margin-left: auto; 
+    cursor: pointer; 
+    position: absolute;
+    top: 100px;
+    right: 5px;
+    height: 200px;
+    background-color: #fff;
+
+  }
+  .header li {
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+  }
+
+  .header-menu-bar {
+    display: block; /* Show the hamburger menu on smaller screens */
+  }
+
+  
+
+  #link {
+    margin-left: 0;
+    /* Remove the left margin */
+  }
+  .logo1{
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
+  .secondIconeContact {
+    font-size: x-large;
+    position: absolute;
+    top: 35px;
+    right: 150px;
+    background: none;
+    color: white;
+  }
+
+  .theredIconeContact {
+    font-size: x-large;
+    position: absolute;
+    top: 48px;
+    right: 100px;
+    background: none;
+  }
+  
+
+}

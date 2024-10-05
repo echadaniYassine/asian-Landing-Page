@@ -1,0 +1,190 @@
+
+.icon-user{
+  font-size: x-large;
+  margin-left: 20px;
+  color: white;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  /* Ensure this matches the height in your inline styles */
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  background-color: white;
+  /* Optional: to ensure visibility of the header */
+  z-index: 10000;
+}
+.header-menu-bar li {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Change to your desired color */
+}
+
+header.scrolled ul li {
+  background-color: rgba(0, 0, 0, 0);
+  /* Change to your desired color */
+  color: white;
+  /* Ensure text color contrasts with background */
+}
+
+header.scrolled ul li a {
+  color: rgb(192, 161, 24);
+}
+
+li {
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  padding: 5px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  /* Allow vertical stacking of li content */
+  align-items: center;
+  margin-left: 45px;
+  margin-right: 45px;
+  font-size: 23px;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+}
+#link0{
+  margin-left: 120px;
+}
+li:hover,
+li:focus {
+  transform: scale(1.1);
+  box-shadow: whitesmoke;
+  border-radius: 5px;
+  color: green;
+}
+
+#link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgb(192, 161, 24);
+  margin-left: 200px;
+}
+
+
+li.active {
+  color: green;
+}
+
+li hr {
+  width: 0%;
+  height: 2px;
+  background-color: green;
+  border: none;
+  transition: width 0.3s;
+}
+
+li.active hr {
+  width: 100%;
+}
+
+.logo1 {
+  width: 100px;
+  height: 90px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+  margin-right: 19px;
+  margin-left: 19px;
+}
+.header-menu-bar{
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  
+
+  #link0{
+    display: none;
+  }
+  .hideIcon{
+    display: none;  
+  }
+  .secondIcone{
+    font-size: x-large;
+    position: absolute;
+    top:35px ;
+    right: 150px;
+    color: black;
+  }
+  .theredIcone{
+    font-size: x-large;
+    position: absolute;
+    top:48px ;
+    right: 100px;
+    background: none;
+  }
+  header {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  header ul {
+    display: none;
+    border: none;
+    flex-direction: column;
+    border-radius: 50px;
+    width: 180px;
+    display: block; 
+    margin-left: auto; 
+    cursor: pointer; 
+    position: absolute;
+    top: 100px;
+    right: 5px;
+    height: 200px;
+    background-color: white;
+  }
+  header ul li {
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+  }
+
+  .header-menu-bar {
+    display: block; 
+    margin-left: 360px;
+    display: block; 
+    margin-left: auto;
+    cursor: pointer;
+  }
+.logo1{
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+ 
+}

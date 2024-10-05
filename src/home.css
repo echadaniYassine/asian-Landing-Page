@@ -1,0 +1,269 @@
+* {
+    background-color: white;
+}
+
+.Snap {
+    background-color: #5f7e21;
+    color: whitesmoke;
+    width: 350px;
+    height: 90px;
+    border-radius: 70px;
+    margin-left: 190px;
+    margin-top: 50px;
+    border: none;
+    transition: background-color 1s ease;
+    cursor: pointer;
+}
+
+.Snap:hover {
+    background-color: #6aba00;
+    /* Change color on hover */
+}
+
+.Snap2 {
+    background: none;
+    color: orange;
+    width: 350px;
+    height: 75px;
+    border-radius: 70px;
+    margin-left: 190px;
+    margin-top: 20px;
+    border: none;
+    transition: background-color 1s ease;
+    border: 5px orange solid;
+}
+
+.Snap2:hover {
+    background-color: #f6f6f6;
+    /* Change color on hover */
+}
+
+.imgPlay {
+    float: left;
+    margin-right: 12px;
+    background: none;
+    width: 50px;
+    height: 50px;
+
+}
+
+.googleplay {
+    float: right;
+    margin-right: 70px;
+    margin-top: 5px;
+    font-size: xx-large;
+    background: none;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-180px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        /* Start from outside the view */
+    }
+
+    to {
+        transform: translateX(0);
+        /* Move the image to its original position */
+    }
+}
+
+.imageFit {
+    margin-left: 900px;
+    position: absolute;
+    top: 120px;
+    width: 900px;
+    height: 700px;
+    z-index: 10;
+    background: none;
+    transition: clip-path 0.5s ease-in-out, transform 1.5s ease-in-out;
+    /* Transition for clip-path and transform properties */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* Initial clip-path to hide the image */
+    transform: translateX(-100%);
+    /* Initial transform to move the image out of view */
+    animation: slideIn 1.5s forwards;
+    /* Apply slideIn animation */
+}
+
+.homePage {
+    margin-top: 30px;
+    background-image: url('./assets/27464.png');
+}
+
+.social {
+    text-align: center;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+
+.media {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+
+.points {
+    margin-bottom: 20px;
+    margin-top: -20px;
+    text-align: center;
+    /* Align points to the center */
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.point.active {
+    background-color: orange;
+}
+
+.point:hover {
+    background-color: orange;
+}
+
+.fade-in {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* Fully reveal the image */
+}
+
+.fade-out {
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
+    /* Fully hide the image */
+}
+
+.para1 {
+
+    background-color: transparent;
+    margin-left: 190px;
+    font-size: 30px;
+    font-family: cursive;
+    padding-top: 25px;
+    animation: slideInRight 1.5s forwards;
+    color: black;
+
+
+}
+
+.titlehome1 {
+    font-size: 100px;
+    font-family: cursive;
+    padding-top: 120px;
+    margin-left: 190px;
+    animation: fadeInDown 1.5s forwards;
+    color: orange;
+    background: none;
+}
+
+
+@media (max-width: 600px) {
+
+    /* Styles for devices with a maximum width of 600px (e.g., mobile phones) */
+
+    .Snap {
+        width: 300px;
+        height: 70px;
+        border-radius: 50px;
+        text-align: center;
+        margin: 50px 100px;
+    }
+
+    .Snap2 {
+        width: 300px;
+        height: 70px;
+        border-radius: 50px;
+        text-align: center;
+        margin-left: 100px;
+        margin-top: -15px;
+    }
+
+    .imgPlay {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .googleplay {
+        font-size: 30px;
+        text-align: center;
+        margin-right: 30px;
+    }
+
+    .imageFit {
+        width: 100%;
+        height: auto;
+        max-width: 470px;
+        margin-left: 15px;
+
+    }
+
+    .titlehome1 {
+        margin-top: 480px;
+        background-image: none;
+        font-size: 70px;
+        margin-left: 130px;
+    }
+
+    .media {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+
+    .homePage {
+        margin-top: 30px;
+        width: 100%;
+        background-image: none;
+    }
+
+    .para1 {
+        font-size: 25px;
+        margin-left: 30px;
+        text-align: center;
+    }
+
+    .points {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        position: absolute;
+        top: 530px;
+        left: 200px;
+    }
+
+    .social {
+        text-align: center;
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+}

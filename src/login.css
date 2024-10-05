@@ -1,0 +1,341 @@
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: none; /* Optional: slight transparency */
+    backdrop-filter: blur(5px); /* Optional: blur effect */
+}
+
+.loading-overlay p {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: orange;
+    background: none; /* Remove background from the text */
+}
+
+header {
+    position: fixed;
+    background: none;
+    top: 0;
+    height: 120px;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Vertically center the items */
+    transition: top 0.3s;
+}
+
+.header.hidden {
+    background-color: #33480A;
+    color: black;
+}
+
+.nav-item1 {
+    text-decoration: none;
+    margin-right: 40px;
+    background: none;
+}
+
+li {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    background: none;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.logo1 {
+    background: none;
+    
+}
+
+.tast-login {
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 270px;
+}
+
+.container1-login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50px;
+    z-index: 3;
+    position: absolute;
+    left: calc(50% - (60% / 2));
+    /* Adjusted to reflect 57% width */
+    top: 150px;
+    width: 57%;
+    height: 700px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-container1-login {
+    background-color: white;
+    padding: 20px;
+    width: 65%;
+    height: 700px;
+    margin-right: 370px;
+    border-radius: 50px;
+}
+
+.form-container1-login h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 90px;
+    margin-top: 50px;
+    padding-right: 350px;
+}
+
+.form-container1-login input[type="text"],
+.form-container1-login input[type="email"],
+.form-container1-login input[type="password"] {
+    width: 60%;
+    /* Adjusted width to 50% */
+    margin: 10px 50px;
+    padding: 20px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.BackToLogin {
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: larger;
+    position: absolute;
+    top: 555px;
+    left: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid orange;
+    color: orange;
+}
+.BackToLogin:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+
+.form-container1-login input[type="submit"] {
+    width: 200px;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.form-container1-login input[type="submit"]:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+.login-image {
+    z-index: 100;
+    position: absolute;
+    top: 176px;
+    right: 10%;
+    width: 40%;
+    height: 650px;
+    border-radius: 50px;
+    overflow: hidden;
+    background: none;
+}
+
+.login-image img {
+    height: 100%;
+    width: 100%;
+    background: none;
+}
+
+.toggle-button {
+    width: 100px;
+    margin-top: 40px;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid orange;
+    cursor: pointer;
+    margin-left: 50px;
+    color: orange;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 50px;
+}
+
+.toggle-button:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+.margFooter {
+    margin-bottom: 150px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container1-login {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        left: 5%;
+        top: 120px;
+    }
+
+    .form-container1-login {
+        width: 60%;
+        height: auto;
+        margin-right: 0;
+        border-radius: 50px 50px 0 0;
+    }
+
+    .form-container1-login input[type="text"],
+    .form-container1-login input[type="email"],
+    .form-container1-login input[type="password"] {
+        width: 75%;
+        /* Adjusted width to 50% */
+        margin: 10px 50px;
+        padding: 20px 0;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .form-container1-login input[type="submit"] {
+        color: white;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .toggle-button {
+        width: 40%;
+
+    }
+
+
+    .form-container1-login h2 {
+        padding-right: 0;
+    }
+
+    .login-image {
+        width: 50%;
+        height: 500px;
+        border-radius: 0 0 50px 50px;
+        position: absolute;
+        right: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container1-login {
+        width: 90%;
+        left: 5%;
+        top: 120px;
+        height: 670px;
+    }
+
+    .form-container1-login {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 90px;
+    }
+
+    .form-container1-login h2 {
+        font-size: 60px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .login-image {
+        display: none;
+
+    }
+
+    .form-container1-login input[type="text"],
+    .form-container1-login input[type="email"],
+    .form-container1-login input[type="password"] {
+        width: 90%;
+        margin: 10px 5%;
+    }
+
+    .form-container1-login input[type="submit"] {
+
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+
+
+    }
+
+    header {
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+    ul {
+        display: none;
+        /* The display property will be controlled by inline style from React */
+        flex-direction: column;
+        border: 1px solid green;
+        border-radius: 50px;
+        width: 180px;
+    }
+
+    .header-menu-bar {
+        display: block;
+        /* Show the hamburger menu on smaller screens */
+    }
+
+    li {
+        margin: 10px 0;
+        /* Add some margin between list items */
+    }
+
+    #link {
+        margin-left: 0;
+        /* Remove the left margin */
+    }
+
+    .logo1 {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+    }
+}

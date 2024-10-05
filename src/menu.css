@@ -1,0 +1,140 @@
+.homeimg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.items {
+  background: none;
+  width: 400px;
+  border-radius: 40px;
+  background-color: #fff;
+  margin-top: 50px;
+
+}
+
+.items-price {
+  padding-top: 20px;
+  background-color: #fff;
+  padding-bottom: 10px;
+
+}
+
+.items-desc {
+  background-color: #fff;
+
+}
+
+.section2 {
+  background-image: url("./assets/close-up-marble-textured-background.png");
+  margin-top: 0;
+  padding-bottom: 70px;
+
+
+}
+
+.homePage1 {
+  background-image: url("./assets/Group\ 13.png");
+  width: 100%;
+  height: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+.imageHome {
+  width: 55%;
+  height: 800px;
+  float: right;
+  background-color: none;
+  margin-right: 0;
+
+}
+
+.textMenu {
+  font-size: '100px';
+  font-Family: "cursive";
+  padding-Top: "120px";
+  margin-Left: "190px";
+  animation: 'fadeInDown 1.5s forwards';
+  color: "orange";
+  z-index: 1;
+}
+
+.add-to-cart-button {
+  margin-bottom: 20px;
+}
+
+.items-desc {
+  padding: 10px;
+}
+
+.mouveTitle h1 {
+  font-Size: 150px;
+  background: none;
+  font-family: cursive;
+  padding-top: 180px;
+  margin-left: 190px;
+  animation: fadeInDown 1.5s forwards;
+  color: orange
+}
+
+.mouveTitle h2 {
+  font-size: 60px;
+  background: none;
+  font-family: cursive;
+  margin-left: 350px;
+  animation: fadeInDown 1.5s forwards;
+  color: white
+}
+
+.mouveTitle button {
+  margin-Left: 330px;
+  margin-Top: 40px;
+  background-Color: orange;
+  width: 250px;
+  height: 60px;
+  font-Size: 30px;
+  font-Weight: bold;
+  border-Radius: 20px
+}
+
+@media (max-width: 600px) {
+  .homePage1 {
+    width: 100%;
+    height: 900px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .imageHome {
+    display: none;
+
+  }
+
+  .mouveTitle {
+    margin-top: -10px;
+    text-align: start;
+    margin-left: -120px;
+  }
+
+  .mouveTitle h1 {
+    font-size: 100px;
+    text-align: start;
+    margin-left: 170px;
+  }
+
+  .mouveTitle h2 {
+    margin-left: 260px;
+    
+
+  }
+  .mouveTitle button {
+    margin-Left: 236px;
+  }
+  #link,#link1{
+    display: none;
+  }
+  
+
+}

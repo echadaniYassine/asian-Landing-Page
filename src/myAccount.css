@@ -1,0 +1,255 @@
+.account-container {
+    text-align: center;
+    margin: 10%;
+  }
+  
+  .welcome-message {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    margin: 2%;
+  }
+  
+  .modify-section {
+    padding: 2%;
+    background-color: whitesmoke;
+    border-radius: 100px;
+    box-shadow: 0 2px 4px rgba(51, 72, 10, 0.5); 
+  }
+  
+  .modify-section label {
+    background: none;
+    color: #33480A;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-left: -370px;
+  }
+  
+  .modify-section input {
+    padding: 0.5rem 0.5rem 0.5rem calc(20px + 0.5rem); 
+    margin-top: 0.25rem;
+    width: 450px;
+    height: 50px;
+    font-size: large;
+    border-radius: 50px;
+  }
+  .modify-section button {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: medium;
+    background-color: #33480A;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px green; 
+
+
+  }
+  .modify-section button:hover{
+    background-color: orange;
+    border: none;
+    box-shadow: 0 2px 4px rgb(255, 183, 50); 
+
+  }
+  
+  .preferences-section {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(51, 72, 10, 0.5); /* Adjust the shadow color and size as needed */
+
+  }
+  .preferences-section h3 {
+    text-align: center;
+    background:none;
+    margin-bottom: 20px;
+  }
+  .preferences-section p {
+    text-align: center;
+    background:none;
+    margin-bottom: 20px;
+  }
+  .logout-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 50px;
+  }
+  .logout-button:hover{
+    background-color: #33480A;
+    border: none;
+    box-shadow: 0 2px 4px rgb(0, 53, 0);
+
+  }
+  .login-prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .login-prompt h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-prompt button {
+    background-color: #33480A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-prompt button:hover {
+    background-color: orange;
+  }
+  
+  header {
+    position: fixed;
+    background: none;
+    top: 0;
+    height: 120px;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: top 0.3s;
+}
+.header.hidden {
+    background-color: #33480A;
+    color: black;
+}
+.nav-item1 {
+    text-decoration: none;
+    margin-right: 40px; 
+    background: none;
+}
+
+li {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    background: none;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.logo1 {
+    background: none;
+}
+.first-container{
+    margin-top: 150px;
+}
+
+.Message {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.Message.success {
+  color: green;
+  background-color: #e0ffe0;
+  text-align: center;
+  margin: 30px 30px;
+  width: 50%;
+  border-radius: 50px;
+
+}
+
+.Message.error {
+  color: red;
+  background-color: #ffe0e0;
+  text-align: center;
+  margin: 30px 30px;
+  width: 50%;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .account-container {
+    margin: 10%;
+  }
+
+  .welcome-message {
+    font-size: 40px;
+    margin: 1%;
+    margin-bottom: 40px;
+  }
+
+  .modify-section {
+    padding: 4%;
+    border-radius: 50px;
+    margin-bottom: 50px;
+  }
+
+  .modify-section label {
+    margin-left: 30px;
+    text-align: start;
+  }
+
+  .modify-section input {
+    width: 95%;
+    border-radius: 50px;
+  }
+  .modify-section input[type="password"]{
+    margin-bottom: 30px;
+  }
+
+  .modify-section button {
+    width: 50%;
+    margin-top: 10px; 
+  }
+
+  .preferences-section {
+    padding: 1rem;
+    border-radius: 50px;
+    margin-bottom: 10px;
+  }
+
+  .preferences-section h3,
+  .preferences-section p {
+    margin-bottom: 10px; 
+  }
+
+  .logout-button {
+    width: 100%;
+    margin-top: 0.5rem; 
+  }
+
+  .login-prompt {
+    margin-top: 30px; 
+  }
+
+  .login-prompt h1 {
+    font-size: 20px;
+    margin-bottom: 10px; 
+  }
+
+  .login-prompt button {
+    padding: 8px 16px; 
+    font-size: 14px; 
+  }
+}
