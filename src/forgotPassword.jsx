@@ -20,7 +20,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setMessage('');
     try {
-      const response = await axios.post('http://localhost:4002/auth/forgot-password', { email });
+      const response = await axios.post('https://auth-service-flax.vercel.app', { email });
       setMessage(response.data.message || 'Verification code sent to your email.');
       setIsError(false);
       setVerificationCode(response.data.verificationCode);
@@ -52,7 +52,7 @@ const ForgotPassword = () => {
     setIsError(false); // Reset the error state
   
     try {
-      const response = await axios.post(`http://localhost:4002/auth/reset-password/${resetToken}`, {
+      const response = await axios.post(`https://auth-service-flax.vercel.app/${resetToken}`, {
         newPassword,
         verificationCode: enteredCode
       });
