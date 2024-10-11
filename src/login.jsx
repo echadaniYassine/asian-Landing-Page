@@ -68,7 +68,7 @@ export default function Login() {
         try {
             if (isLogin) {
                 // Handle login
-                const response = await axios.post('https://auth-service-flax.vercel.app/auth/login', {
+                const response = await axios.post('https://auth-service-one.vercel.app/auth/login', {
                     email: formData.email,
                     password: formData.password
                 });
@@ -85,7 +85,7 @@ export default function Login() {
                 }, 2000);
             } else {
                 // Handle sign up
-                const response = await axios.post('https://auth-service-flax.vercel.app/auth/register', {
+                const response = await axios.post('https://auth-service-one.vercel.app/auth/register', {
                     username: formData.username,
                     email: formData.email,
                     password: formData.password
