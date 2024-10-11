@@ -73,7 +73,7 @@ const MyAccount = () => {
 
   const handleSave = async () => {
     try {
-      const response = await axios.put('http://localhost:4002/auth/modify', {
+      const response = await axios.put('https://auth-service-flax.vercel.app', {
         username,
         email,
         password,
