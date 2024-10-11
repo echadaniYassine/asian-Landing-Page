@@ -48,7 +48,7 @@ const MyAccount = () => {
 
     if (storedEmail) {
       axios
-        .get(`http://localhost:4002/auth/user-info/${storedEmail}`)
+        .get(`https://auth-service-flax.vercel.app/${storedEmail}`)
         .then((response) => {
           setUsername(response.data.username);
         })
