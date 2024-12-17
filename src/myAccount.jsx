@@ -48,7 +48,7 @@ const MyAccount = () => {
 
     if (storedEmail) {
       axios
-        .get(`http://localhost:4002/auth/user-info/${storedEmail}`)
+        .get(`https://auth-service-flax.vercel.app/${storedEmail}`)
         .then((response) => {
           setUsername(response.data.username);
         })
@@ -73,7 +73,7 @@ const MyAccount = () => {
 
   const handleSave = async () => {
     try {
-      const response = await axios.put('http://localhost:4002/auth/modify', {
+      const response = await axios.put('https://auth-service-flax.vercel.app', {
         username,
         email,
         password,
