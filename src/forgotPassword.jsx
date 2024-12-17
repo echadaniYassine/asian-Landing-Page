@@ -8,7 +8,6 @@ const ForgotPassword = () => {
   const [message, setMessage] = useState('');
   const [isVerificationCode, setIsVerificationCode] = useState(false);
   const [isResetPassword, setIsResetPassword] = useState(false);
-  const [verificationCode, setVerificationCode] = useState('');
   const [enteredCode, setEnteredCode] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [isError, setIsError] = useState(false);
@@ -23,9 +22,8 @@ const ForgotPassword = () => {
       const response = await axios.post('http://localhost:4002/auth/forgot-password', { email });
       setMessage(response.data.message || 'Verification code sent to your email.');
       setIsError(false);
-      setVerificationCode(response.data.verificationCode);
-      setResetToken(response.data.resetToken); // Make sure response.data.resetToken is properly set
-      setIsVerificationCode(true);
+      setResetToken(response.data.resetToken); // Store reset token from the backend
+      setIsVerificationCode(true); // Move to verification code step
     } catch (error) {
       console.error('Error during password reset:', error);
       setMessage(error.response?.data?.message || 'An error occurred. Please try again.');
@@ -33,32 +31,34 @@ const ForgotPassword = () => {
     }
   };
 
-  const handleVerificationCodeSubmit = async (e) => {
+  const handleVerificationCodeSubmit = (e) => {
     e.preventDefault();
     setMessage('');
-    if (parseInt(enteredCode, 10) === verificationCode) {
-      setMessage('Code verified successfully.');
-      setIsError(false);
-      setIsResetPassword(true);
-    } else {
-      setMessage('Invalid verification code.');
+
+    if (enteredCode.trim() === '') {
+      setMessage('Please enter the verification code.');
       setIsError(true);
+      return;
     }
+
+    // Proceed to reset password form if the code is entered
+    setIsVerificationCode(false);
+    setIsResetPassword(true);
   };
 
   const handleResetPasswordSubmit = async (e) => {
     e.preventDefault();
     setMessage('');
     setIsError(false); // Reset the error state
-  
+
     try {
       const response = await axios.post(`http://localhost:4002/auth/reset-password/${resetToken}`, {
         newPassword,
-        verificationCode: enteredCode
+        verificationCode: enteredCode // Pass entered verification code along with the new password
       });
-  
+
       if (response.data.message === 'Password reset successfully') {
-        setShowSuccessModal(true);
+        setShowSuccessModal(true); // Show success modal after successful password reset
       } else {
         setMessage(response.data.message);
         setIsError(true);
@@ -73,7 +73,6 @@ const ForgotPassword = () => {
       setIsError(true);
     }
   };
-  
 
   return (
     <div className="container-forget">
@@ -113,7 +112,7 @@ const ForgotPassword = () => {
         <>
           <div className='container-reset'>
             <h2>Reset Password</h2>
-            <form onSubmit={handleResetPasswordSubmit} >
+            <form onSubmit={handleResetPasswordSubmit}>
               <input
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Enter new password"
@@ -128,7 +127,6 @@ const ForgotPassword = () => {
               <input type="submit" value="Save" />
             </form>
           </div>
-
         </>
       ) : null}
 
