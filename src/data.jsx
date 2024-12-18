@@ -23,124 +23,68 @@ export const Menu = [
   },
   {
     Price: 90,
-    Name: 'Dragon Roll',
-    Description: 'Eel, avocado, and cucumber topped with slices of avocado and eel sauce.',
-    ImageSrc: img3,
-    id: 3
-  },
-  {
-    Price: 90,
     Name: 'Rainbow Roll',
     Description: 'Assorted fish (tuna, salmon, yellowtail) and avocado wrapped around a California roll.',
     ImageSrc: img4,
-    id: 4
+    id: 3
   },
   {
     Price: 90,
     Name: 'Nigiri Combo',
     Description: 'Assortment of nigiri sushi including tuna, salmon, shrimp, and yellowtail.',
     ImageSrc: img5,
-    id: 5
+    id: 4
   },
   {
     Price: 90,
     Name: 'Sashimi Platter',
     Description: 'Assortment of fresh sashimi including tuna, salmon, yellowtail, and octopus.',
     ImageSrc: img6,
-    id: 6
+    id: 5
   },
   {
     Price: 90,
     Name: 'Chirashi Bowl',
     Description: 'Assortment of sashimi over a bed of sushi rice.',
     ImageSrc: img7,
-    id: 7
-  },
-  {
-    Price: 90,
-    Name: 'California Roll',
-    Description: 'Crab, avocado, and cucumber wrapped in seaweed and sushi rice.',
-    ImageSrc: img1,
-    id: 8
-  },
-  {
-    Price: 90,
-    Name: 'Spicy Tuna Roll',
-    Description: 'Fresh tuna mixed with spicy mayo, wrapped in seaweed and sushi rice.',
-    ImageSrc: img2,
-    id: 9
+    id: 6
   }
 ];
 
 export const Category = [
   {
-    Name: 'Specialtyy Rolls 1',
+    Name: 'Specialty Rolls 1',
     Description: 'Assorted rolls wrapped in seaweed and sushi rice.',
     ImageSrc: img1,
     id: 1,
-    menu: Menu.slice(0, 3) // Slice the Menu array to include the first three items
+    menu: Menu.slice(0, 3) // First three items from the Menu
   },
   {
     Name: 'Nigiri & Sashimi 2',
     Description: 'Fresh fish served on top of sushi rice or as slices of raw fish.',
     ImageSrc: img3,
     id: 2,
-    menu: Menu.slice(3, 6) // Slice the Menu array to include items 4, 5, and 6
-  },
-  {
-    Name: 'Specialty Rolls 3',
-    Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
-    ImageSrc: img4,
-    id: 3,
-    menu: Menu.slice(0, 3) // Slice the Menu array to include the last three items
+    menu: Menu.slice(3, 6) // Last three items from the Menu
   },
   {
     Name: 'Specialty Rolls 4',
     Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
     ImageSrc: img6,
-    id: 4,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
-  },
-  {
-    Name: 'Specialty Rolls 5',
-    Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
-    ImageSrc: img7,
-    id: 5,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
-  },
-  {
-    Name: 'Specialty Rolls 6',
-    Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
-    ImageSrc: img1,
-    id: 6,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
-  },
-  {
-    Name: 'Specialty Rolls 7',
-    Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
-    ImageSrc: img2,
-    id: 7,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
-  },
-  {
-    Name: 'Specialty Rolls 8',
-    Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
-    ImageSrc: img1,
-    id: 8,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
+    id: 3,
+    menu: Menu.slice(2, 5) // Last three items from the Menu
   },
   {
     Name: 'Specialty Rolls 9',
     Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
     ImageSrc: img4,
-    id: 9,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
+    id: 4,
+    menu: Menu.slice(0, 3) // Last three items from the Menu
   },
   {
     Name: 'Specialty Rolls 10',
     Description: 'Creative and unique sushi rolls with special ingredients and toppings.',
     ImageSrc: img7,
-    id: 10,
-    menu: Menu.slice(6, 9) // Slice the Menu array to include the last three items
+    id: 5,
+    menu: Menu.slice(2, 5) // Last three items from the Menu
   }
 ];

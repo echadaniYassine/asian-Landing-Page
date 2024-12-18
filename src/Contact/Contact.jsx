@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import './Contact.css';
-import taste from './assets/contact13.png';
-import logo from './assets/image.png';
-import ImageFit from './assets/china.png';
+import taste from '../assets/contact13.png';
+import logo from '../assets/image.png';
+import ImageFit from '../assets/china.png';
 import { useState, useEffect } from "react";
-import phone from './assets/icons8-ringer-volume-50.png';
-import adress from './assets/location_12656056.png';
+import phone from '../assets/icons8-ringer-volume-50.png';
+import adress from '../assets/location_12656056.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faUser } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // Make sure to install axios: npm install axios
