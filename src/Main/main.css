@@ -196,7 +196,7 @@
 .title-menu.active,
 .title-category.active {
   color: #9bbe40; /* Change text color when active */
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1); /* Slight zoom effect */
 }
 
 /* Title line animation */
