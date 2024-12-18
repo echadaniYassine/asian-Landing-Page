@@ -190,7 +190,13 @@
   text-transform: uppercase;
   margin-bottom: 80px;
   position: relative;
-  animation: fadeInBounce 1.5s ease-out;
+  transition: all 0.4s ease; /* Smooth transition */
+}
+
+.title-menu.active,
+.title-category.active {
+  color: #9bbe40; /* Change text color when active */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Title line animation */
@@ -203,16 +209,15 @@
   background-color: #9bbe40;
   margin: 10px auto 0;
   border-radius: 2px;
-  transition: width 0.5s ease-in-out;
+  transition: width 2s ease-in-out;
   opacity: 0;
 }
 
 /* Line expansion and fade-in */
-.title-menu:hover::after,
-.title-category:hover::after {
-  width: 80px;
+.title-menu.active::after,
+.title-category.active::after {
+  width: 95px;
   opacity: 1;
-  animation: lineExpand 0.5s ease-out;
 }
 
 @keyframes fadeInBounce {
