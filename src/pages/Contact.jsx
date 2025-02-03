@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
-import './Contact.css';
-import taste from '../assets/contact13.png';
-import logo from '../assets/image.png';
-import ImageFit from '../assets/china.png';
+import '../style/Contact.css';
 import { useState, useEffect } from "react";
-import phone from '../assets/icons8-ringer-volume-50.png';
-import adress from '../assets/location_12656056.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faUser } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // Make sure to install axios: npm install axios
@@ -98,7 +93,7 @@ export default function Contact() {
             <header className={`header ${showHeader ? '' : 'hidden'}`} >
                 <div className="logo-container" style={{ background: "none" }} >
                     <Link to="/" style={{ textDecoration: "none", background: "none" }} onClick={() => handleClick(0)}>
-                        <img style={{ marginRight: "220px", background: "none" }} className='logo1' src={logo} alt="logo" />
+                        <img style={{ marginRight: "220px", background: "none" }} className='logo1' src="assets/image.png" alt="logo" />
                     </Link>
                 </div>
                 <ul className="ul" style={{ display: isMenuVisible || !isSmallScreen ? 'flex' : 'none' }}>
@@ -154,7 +149,7 @@ export default function Contact() {
                 </Link>
             </header>
 
-            <img className='tast' src={taste} alt="Image" />
+            <img className='tast' src="assets/contact13.png" alt="Image" />
             <div className="container1">
                 <div className="form-container1">
                     <h2>Contact Us</h2>
@@ -189,7 +184,7 @@ export default function Contact() {
                     </form>
                 </div>
                 <div className="image-container1">
-                    <img src={ImageFit} alt="Image" />
+                    <img src="assets/china.png" alt="Image" />
                 </div>
             </div>
             <footer className="footer">
@@ -224,12 +219,12 @@ export default function Contact() {
                         </tr>
                     </table>
                     <div className="address-info">
-                        <img src={adress} alt="Address Icon" />
+                        <img src="assets/location_12656056.png" alt="Address Icon" />
                         <span>23 rue Tal Zaatar Rue du Louvre Casablanca</span>
                     </div>
 
                     <div className="phone-info">
-                        <img src={phone} alt="Phone Icon" />
+                        <img src="assets/icons8-ringer-volume-50.png" alt="Phone Icon" />
                         <span> 0642420823 / 0522980679</span>
                     </div>
 

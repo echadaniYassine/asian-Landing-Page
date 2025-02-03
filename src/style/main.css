@@ -1,0 +1,185 @@
+.main-container{
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin: 60px auto;
+  margin-bottom: 50px;
+}
+
+/* Category Item */
+.category-item {
+  width: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+}
+
+/* Category Image */
+.category-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+/* Category Name */
+.category-name {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+
+/* Active Category */
+.category-item.active {
+  background-color: #f1f1f1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-item.active .category-name {
+  color: #388E3C; 
+}
+
+/* Menu Section */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  margin: 60px auto;
+}
+
+/* Menu Card */
+.menu-card {
+  background: #fff;
+  border-radius: 30px;
+  width: 300px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  text-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 15px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Menu Card */
+.menu-card {
+  background: transparent; 
+  border-radius: 40px;
+  max-width: 400px;
+  max-height: 450px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Center content horizontally */
+  justify-content: space-between; /* Space out content vertically */
+}
+
+/* Menu Card Image */
+.menu-card-img {
+  width: 200px;
+  height: 200px; /* Ensure it's a square */
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.menu-card:hover .menu-card-img {
+  transform: scale(1.1);
+}
+
+/* Menu Card Price */
+.menu-card-price {
+  margin: 15px 0;
+  font-size: 30px;
+  margin-bottom: -10px;
+  color: orange;
+  font-weight: bold;
+  text-align: start; /* Ensures price is centered */
+}
+
+/* Menu Card Description */
+.menu-card-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: start; /* Ensures description is centered */
+}
+
+
+/* Title Styling */
+.title-menu,
+.title-category {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #4CAF50;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Title Animation */
+.title-menu.active,
+.title-category.active {
+  color: #388E3C;
+}
+
+.title-menu::after,
+.title-category::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #4CAF50;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  opacity: 0;
+  transition: width 0.4s ease, opacity 0.3s ease;
+}
+
+.title-menu.active::after,
+.title-category.active::after {
+  width: 100px;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-item {
+    margin-bottom: 20px;
+  }
+}

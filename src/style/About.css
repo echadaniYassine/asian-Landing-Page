@@ -1,0 +1,148 @@
+/* About Section Container */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 80px 5%;
+  background-color: transparent;
+}
+
+/* Flexbox Layout */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Image Section */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+/* Text Section */
+.text-container {
+  flex: 1;
+  text-align: left;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Underline Effect for Title */
+.about-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: green;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Paragraph */
+.txtabout {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Highlighted Text */
+.highlight {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Benefits Section */
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.benefits li {
+  font-size: 1.1rem;
+  color: #333;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+/* Checkmark before each benefit */
+.benefits li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: rgb(255, 123, 0);
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* CTA Button */
+.about-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #ff7b00;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.about-btn:hover {
+  background: #e66a00;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

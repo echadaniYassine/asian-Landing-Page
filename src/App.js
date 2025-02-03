@@ -1,26 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Home/homePage.jsx';
-import About from './About/About.jsx';
-import Contact from './Contact/Contact.jsx';
-import Header from './Header/header.jsx';
-import  Footer  from './Footer/footer.jsx';
-import Main from './Main/main.jsx';
+import Hero from './components/hero';
+import Header from './components/header';
+import About from './components/About';
+import Main from './components/main';
+import Footer from './components/footer';
 
 function App() {
   return (
     <Router>
       <>
         <Header />
-        <Home />
-        <Main />
+        <Hero />
         <About />
+        <Main />
         <Footer />
-
-        <Routes>
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
       </>
+
     </Router>
   );
 }

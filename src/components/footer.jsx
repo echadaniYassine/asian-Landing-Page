@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
-import axios from "axios"; // Import Axios for POST requests
-import './footer.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-
+import React, { useState } from "react";
+import axios from "axios";
+import "../style/footer.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
     const [formData, setFormData] = useState({
@@ -25,19 +24,15 @@ export default function Footer() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Define the Formspree endpoint
-        const formEndpoint = "https://formspree.io/f/xldekvpq"; // Replace with your Formspree form endpoint
+        const formEndpoint = "https://formspree.io/f/xldekvpq";
 
-        // Send form data to Formspree using Axios
         axios
             .post(formEndpoint, formData)
             .then((response) => {
-                console.log(response.data);
-                setIsSubmitted(true); // Indicate that the form was submitted
-                setFormData({ name: "", email: "", message: "" }); // Clear form data
+                setIsSubmitted(true);
+                setFormData({ name: "", email: "", message: "" });
             })
             .catch((error) => {
-                console.error(error);
                 setError("There was an error submitting the form. Please try again.");
                 setIsSubmitted(false);
             });
@@ -46,21 +41,23 @@ export default function Footer() {
     return (
         <div id="contact" className="contact-container">
             <div className="contact-left">
-                <h1 className="contact-title">Asian <span>Contact</span></h1>
+                <h1 className="contact-title">
+                    Asian <span>Contact</span>
+                </h1>
                 <p className="contact-description">
-                    Indulge in Asia's exquisite flavors, where tradition meets modern innovation,
-                    transporting you straight to the heart of Japan.                </p>
+                    Indulge in Asia's exquisite flavors, where tradition meets modern innovation, transporting you straight to the heart of Japan.
+                </p>
                 <div className="contact-icons">
                     <div className="contact-icon">
-                        <FaEnvelope style={{ color: "#5f7e21",  marginRight:"10px"}} />
-                        <span>Email : asiantaste713@gmail.com</span>
+                        <FaEnvelope style={{ color: "#5f7e21", marginRight: "10px" }} />
+                        <span> <a href="mailto:asiantaste713@gmail.com"  className="footer__contact-link"> asiantaste713@gmail.com</a></span>
                     </div>
                     <div className="contact-icon">
-                        <FaPhone style={{ color: "#5f7e21",  marginRight:"10px"}} />
-                        <span>Phone : 0642420823 / 0522980679</span>
+                        <FaPhone style={{ color: "#5f7e21", marginRight: "10px" }} />
+                        <span>+212 642 420823 / +212 522 980679</span>
                     </div>
                     <div className="contact-icon">
-                        <FaMapMarkerAlt style={{ color:"#5f7e21", marginRight:"10px" }} />
+                        <FaMapMarkerAlt style={{ color: "#5f7e21", marginRight: "10px" }} />
                         <span>23 rue Tal Zaatar, Rue du Louvre, Casablanca</span>
                     </div>
                 </div>
@@ -80,48 +77,47 @@ export default function Footer() {
             <div className="contact-right">
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Full Name</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            placeholder="who Asian contacting with today"
+                            placeholder="Your Name"
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email Address</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            placeholder="Let`s touch on email"
+                            placeholder="Your Email"
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="message">Message</label>
+                        <label htmlFor="message">Your Message</label>
                         <textarea
                             id="message"
                             name="message"
                             value={formData.message}
                             onChange={handleInputChange}
-                            placeholder="What are you craving today?"
+                            placeholder="Your Message"
                             required
                         />
                     </div>
                     <button type="submit" className="submit-button">
-                        Contact Me
+                        Send Message
                     </button>
                 </form>
-                {isSubmitted && <p>Message sent successfully!</p>}
+                {isSubmitted && <p className="success">Message sent successfully!</p>}
                 {error && <p className="error">{error}</p>}
             </div>
-
         </div>
     );
 }

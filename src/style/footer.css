@@ -1,0 +1,174 @@
+/* Container for the footer */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+}
+
+.footer__contact-link {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__contact-link:hover {
+    color: orange;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Left section of the footer */
+.contact-left {
+    flex: 1;
+    padding-right: 40px;
+}
+
+/* Title and animation */
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #5f7e21;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-title span {
+    color: orange;
+}
+
+/* Description */
+.contact-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Contact icons */
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.contact-icon span {
+    margin-left: 10px;
+}
+
+/* Social media icons */
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: orange;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #5f7e21;
+    transform: scale(1.1);
+}
+
+/* Right section of the footer */
+.contact-right {
+    flex: 1;
+    padding-left: 40px;
+    border-left: 2px solid #ccc;
+}
+
+/* Form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #5f7e21;
+    outline: none;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: orange;
+}
+
+/* Submit button styles */
+.submit-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, #5f7e21 50%, orange 50%);
+    background-size: 200%;
+    background-position: right;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-position 0.5s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-position: left;
+    transform: scale(1.05);
+}
+
+/* Success and error message */
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
